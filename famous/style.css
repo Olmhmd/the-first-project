@@ -1,0 +1,285 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #111; /* أسود غامق */
+    color: #f2f2f2;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Main title + Logo */
+nav h2 {
+    color: #f5c400;
+    font-size: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+/* Logo صغير دائري */
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    border: 2px solid #f5c400;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.2) rotate(15deg);
+    box-shadow: 0 0 15px #f5c400;
+}
+
+/* Headings */
+h1 {
+    color: #f5c400;
+    font-size: 48px;
+    margin: 20px 0;
+    text-shadow: 2px 2px 6px #000;
+}
+
+h2 {
+    color: #f5c400;
+    margin: 25px 0 15px 0;
+    font-size: 28px;
+}
+
+/* Paragraphs */
+p {
+    max-width: 850px;
+    margin: 15px auto;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* HR */
+hr {
+    width: 60%;
+    margin: 25px auto;
+    border: 1px solid #333;
+}
+
+/* Menu list */
+ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+ul li {
+    margin: 10px;
+    font-size: 18px;
+    display: inline-block;
+    padding: 8px 15px;
+    background: rgba(245,196,0,0.15);
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+ul li:hover {
+    background: #f5c400;
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* Table */
+table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 10px;
+}
+
+caption {
+    color: #f5c400;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #333;
+    text-align: center;
+    color: #fff;
+}
+
+th {
+    background-color: rgba(0,0,0,0.8);
+    color: #f5c400;
+}
+
+tr:hover {
+    background-color: rgba(245,196,0,0.2);
+}
+
+/* Gallery images - ثابتة جنب بعض */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px auto;
+    width: 90%;
+}
+
+.gallery-container img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: 0.5s;
+    cursor: pointer;
+    filter: brightness(0.9);
+}
+
+.gallery-container img:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 0 25px #f5c400;
+    filter: brightness(1);
+}
+
+/* Side Navbar */
+.side-nav {
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    padding-top: 120px;
+    transition: 0.4s;
+    box-shadow: -4px 0 15px rgba(245,196,0,0.3);
+    z-index: 9999;
+}
+
+.side-nav:hover {
+    right: 0;
+}
+
+.side-nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+.side-nav ul li {
+    margin: 25px 0;
+}
+
+.side-nav ul li a {
+    color: #f5c400;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav ul li a:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Navbar main (top) */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.8);
+    padding: 15px 0;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(245,196,0,0.3);
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f5c400;
+}
+
+/* Order Button */
+.order-btn {
+    margin: 30px auto;
+    padding: 15px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f5c400;
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+}
+
+.order-btn:hover {
+    background-color: #000;
+    color: #f5c400;
+    box-shadow: 0 0 25px #f5c400;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 { font-size: 36px; }
+    h2 { font-size: 24px; }
+    .logo { width: 50px; height: 50px; }
+    table { width: 100%; }
+    .gallery-container img { width: 140px; height: 140px; }
+    nav ul { flex-direction: column; gap: 15px; margin-left: 0; }
+}
+h1 {
+    color: #f5c400;
+    font-size: 48px;
+    margin: 20px 0;
+    text-shadow: 2px 2px 6px #000;
+    transition: all 0.4s ease; /* ضروري للهوفر */
+    display: inline-block; /* علشان transform يشتغل صح */
+    cursor: pointer;       /* مؤشر الماوس */
+}
+
+/* Hover effect */
+h1:hover {
+    transform: scale(1.1) rotate(2deg); /* يكبر شويّة ويميل */
+    color: #fff;                        /* يغير اللون */
+    text-shadow: 0 0 25px #f5c400;     /* glow effect */
+}
+
+h1:hover {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.1) rotate(0deg);
+        text-shadow: 0 0 15px #f5c400;
+    }
+    50% {
+        transform: scale(1.15) rotate(2deg);
+        text-shadow: 0 0 30px #f5c400;
+    }
+    100% {
+        transform: scale(1.1) rotate(0deg);
+        text-shadow: 0 0 15px #f5c400;
+    }
+}
